@@ -1,0 +1,30 @@
+.grid-container {
+  display: grid;
+  /* Mặc định cho máy tính: 4 cột */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: #f28b82;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+}
+
+/* Màn hình máy tính bảng (Dưới 992px): 2 cột 2 hàng */
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Màn hình điện thoại (Dưới 600px): 1 cột 4 hàng */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
